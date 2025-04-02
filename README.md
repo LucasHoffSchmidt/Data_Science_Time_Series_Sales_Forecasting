@@ -141,10 +141,10 @@ Deploy the model to an interactive streamlit dashboard, showing a variety of vis
    - **Percentage errors** for forecasted values
 - We save the monthly sales dataset and the complete dataset in the performant **.parquet** format for loading into the Streamlit app.
 
-The streamlit app can be accessed here: [Sales Forecasting Streamlit App](https://data-science-customer-churn-prediction.streamlit.app/)
+The streamlit app can be accessed here: [Sales Forecasting Streamlit App](https://data-science-sales-forecasting.streamlit.app/)
 
 ### Findings
- - The launched model performs well initially with caching of data only marginally improving the speed of execution. 
+ - The launched model performs well initially with caching of data just marginally improving the speed of execution. 
 
 ---
 
