@@ -1,4 +1,4 @@
-# Data Science: Time Series Sales Forecasting
+# Superstore Time Series Sales Forecasting
 This project seeks to predict future sales of a global superstore to assist in inventory planning and optimizing pricing strategies. 
 
 ## 📊 Business Problem
