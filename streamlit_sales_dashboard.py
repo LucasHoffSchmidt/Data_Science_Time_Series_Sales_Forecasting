@@ -1,14 +1,17 @@
 # Importing packages
 import streamlit as st
-import pandas as pd
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from statsmodels.tsa.holtwinters import ExponentialSmoothing
 import pmdarima as pm
 from sklearn.metrics import mean_absolute_error, root_mean_squared_error, mean_absolute_percentage_error
 import joblib
 
+# App title
+st.title("Superstore Sales Data Interactive Dashboard")
+
+# --- SECTION 0: Loading Data ---
 # Loading variables
 @st.cache_data
 def load_data():
@@ -19,9 +22,6 @@ def load_data():
     return sales_complete, sales_monthly, X_monthly
 
 sales_complete, sales_monthly, X_monthly = load_data()
-
-# App title
-st.title("Superstore Sales Data Interactive Dashboard")
 
 # --- SECTION 1: Filtered Segment Sales ---    
 # Making sidebar filters
@@ -82,7 +82,7 @@ end_month = pd.Timestamp(end_month).to_period('M')
 
 months_selected = (end_month.year - start_month.year) * 12 + (end_month.month - start_month.month)
 
-# Making a slider for forecast horizon
+# Making a slider for the forecast horizon
 forecast_horizon = st.slider(
     "Select forecasting period (1-6 months):", 
     min_value = 1, 
