@@ -11,8 +11,7 @@ import joblib
 # App title
 st.title("Superstore Sales Data Interactive Dashboard")
 
-# --- SECTION 0: Loading Data ---
-# Loading variables
+# Loading and caching data
 @st.cache_data
 def load_data():
     sales_complete = joblib.load("data/sales_complete.pkl")
