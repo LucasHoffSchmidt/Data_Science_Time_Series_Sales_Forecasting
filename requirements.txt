@@ -6,3 +6,4 @@ seaborn == 0.13.2
 pmdarima == 2.0.4
 scikit-learn == 1.5.1
 joblib == 1.4.2
+dill
